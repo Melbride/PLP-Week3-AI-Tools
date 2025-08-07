@@ -1,50 +1,29 @@
- Q1: Explain the primary differences between TensorFlow and PyTorch. When would you choose one over the other?
-TensorFlow and PyTorch are both popular deep learning frameworks with distinct strengths:
+Q1:Explain the primary differences between TensorFlow and PyTorch. When would you choose one over the other?
 
-TensorFlow:
 
-Uses a static computation graph, which is optimized for deployment and production.
+TensorFlow and PyTorch are both powerful deep learning frameworks. The main difference lies in their programming style:
 
-Offers tools like TensorFlow Lite and TensorFlow Serving for mobile and scalable applications.
+TensorFlow uses a static computation graph (although tf.function now allows for more dynamic behavior), which can be optimized for production deployment.
 
-Initially less intuitive but now supports some dynamic behavior with tf.function.
-
-PyTorch:
-
-Uses a dynamic computation graph, making it more Pythonic, easier to debug, and research-friendly.
-
-Ideal for rapid prototyping and academic research.
+PyTorch uses a dynamic computation graph, making it easier to debug and more Pythonic.
 
 When to choose:
 
-✅ Choose TensorFlow for production-ready models, scalable deployments, and integration with tools like TFLite or TensorFlow.js.
+TensorFlow is preferred for production and deployment scenarios (e.g., using TensorFlow Lite or TensorFlow Serving).
 
-✅ Choose PyTorch for research, experimentation, and ease of development.
+PyTorch is preferred in research and rapid prototyping, thanks to its simplicity and flexibility.
 
-❓ Q2: Describe two use cases for Jupyter Notebooks in AI development.
+
+Q2: Describe two use cases for Jupyter Notebooks in AI development.
+
 Exploratory Data Analysis (EDA):
-
-Jupyter Notebooks allow you to visually explore datasets, run cell-by-cell analyses, and include inline plots and tables for deeper insights.
+Jupyter notebooks allow step-by-step data exploration with inline visualizations, making it easier to understand patterns in datasets.
 
 Model Prototyping and Documentation:
+They allow developers to build and test models quickly while documenting the workflow alongside, making it great for collaboration and presentations.
 
-Ideal for writing, testing, and tuning machine learning models, while keeping code, visual output, and markdown notes in the same file for easy collaboration and communication.
 
-❓ Q3: How does spaCy enhance NLP tasks compared to basic Python string operations?
-spaCy provides advanced NLP capabilities such as:
+Q3: How does spaCy enhance NLP tasks compared to basic Python string operations?
 
-🧠 Part-of-Speech (POS) tagging
-
-🏷️ Named Entity Recognition (NER)
-
-🔗 Dependency Parsing
-
-Unlike basic Python string methods, spaCy:
-
-Uses pre-trained language models.
-
-Offers faster processing and greater accuracy.
-
-Is optimized for production-level NLP pipelines.
-
-Handles linguistic nuances that simple .split() or .replace() operations cannot.
+Answer:
+spaCy provides pre-trained language models and linguistic features like part-of-speech tagging, named entity recognition (NER), and dependency parsing — tasks that are difficult to perform using only Python string methods. It is optimized for performance and production use, making NLP pipelines much more efficient and accurate.
