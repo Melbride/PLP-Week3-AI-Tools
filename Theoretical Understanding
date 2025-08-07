@@ -1,4 +1,7 @@
-# Q1: Explain the primary differences between TensorFlow and PyTorch. When would you choose one over the other?
+# 🩺 Diabetes Prediction Based on Symptoms
+
+
+#Q1:Explain the primary differences between TensorFlow and PyTorch. When would you choose one over the other?
 
 TensorFlow and PyTorch are both powerful deep learning frameworks. The main difference lies in their programming style:
 
