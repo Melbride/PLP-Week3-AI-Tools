@@ -1,0 +1,25 @@
+1. Ethical Considerations
+
+In the MNIST model, one potential bias could be the over-reliance on class balance — if some digits appear more frequently than others in the training set, the model may favor those classes.
+
+To mitigate this:
+
+TensorFlow Fairness Indicators can help analyze if the model is biased against certain digit groups.
+
+While spaCy is not typically used in MNIST (an image dataset), its rule-based systems are helpful in NLP tasks for ensuring fairness, such as masking biased phrases or enforcing neutrality in sentiment analysis.
+
+
+2. Troubleshooting Challenge: Buggy TensorFlow Code
+Buggy code:
+
+model.compile(optimizer='adam', loss='mse', metrics=['accuracy'])
+model.fit(X_train, y_train, epochs=5, batch_size=32)
+Fix:
+
+# MNIST is a classification task, so use sparse categorical crossentropy
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+model.fit(X_train, y_train, epochs=5, batch_size=32)
+Changed loss='mse' to loss='sparse_categorical_crossentropy' because MSE is for regression.
+
+Ensured that labels (y_train) are integers (0–9) for sparse categorical loss.
+
